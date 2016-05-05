@@ -16,8 +16,8 @@
         "react-component"
     ],
     "dependencies"   : {
-        "react"           : "0.13",
-        "socket.io-client": "1.3"
+        "react"           : "^15.0.1",
+        "socket.io-client": "^1.4.6"
     },
     "devDependencies": {
         "proxyquire": "1.5",
