@@ -41,6 +41,7 @@
         "eslint": "^3.4.0",
         "faucet": "0.0.1",
         "glob": "^7.0.6",
+        "npm-run-all": "^4.1.1",
         "nyc": "^8.1.0",
         "react": "^15.3.1",
         "react-addons-test-utils": "^15.0.1",
@@ -54,8 +55,9 @@
         "test": "NODE_ENV=test babel-node test",
         "cover": "nyc --reporter=lcov --reporter=text npm test",
         "clean": "rimraf lib/*.*",
-        "build": "npm run clean && babel src -d lib",
+        "build": "npm-run-all clean build:babel",
+		"build:babel": "babel src -d lib",
         "dist": "webpack --optimize-minimize lib/dist.js dist.js",
-        "prepare": "npm run build && npm run dist"
+        "prepare": "npm-run-all build dist"
     }
 }
