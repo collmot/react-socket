@@ -56,7 +56,7 @@
         "cover": "nyc --reporter=lcov --reporter=text npm test",
         "clean": "rimraf lib/*.*",
         "build": "npm-run-all clean build:babel",
-		"build:babel": "babel src -d lib",
+        "build:babel": "babel src -d lib",
         "dist": "webpack --optimize-minimize lib/dist.js dist.js",
         "prepare": "npm-run-all build dist"
     }
