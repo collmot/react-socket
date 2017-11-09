@@ -4,7 +4,7 @@ import { NAME, get } from './socket';
 
 class Listener extends Component {
 
-    componentWillMount () {
+    componentDidMount () {
 
         const {socket, event, callback} = this.props;
 

@@ -20,7 +20,7 @@ export const get = (name = NAME) => {
 
 class Socket extends Component {
 
-    componentWillMount () {
+    componentDidMount () {
 
         const {name, url, options} = this.props;
 
