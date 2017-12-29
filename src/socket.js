@@ -29,7 +29,7 @@ class Socket extends Component {
             throw new Error(`Another "${ name }" socket is already mounted.`);
         }
 
-        SOCKETS[name] = io(url, options);
+        SOCKETS[name] = this.socket = io(url, options);
     }
 
     componentWillUnmount () {
@@ -38,6 +38,8 @@ class Socket extends Component {
 
         SOCKETS[name].disconnect();
         delete SOCKETS[name];
+
+        this.socket = undefined;
     }
 
     render () {
