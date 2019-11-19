@@ -1,8 +1,7 @@
 const path   = require('path'),
       glob   = require('glob'),
       tape   = require('tape'),
-      report = require('faucet'),
-      ignore = require('ignore-styles');
+      report = require('faucet');
 
 tape
     .createStream()
